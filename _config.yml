@@ -107,7 +107,7 @@ author:
   name             : "기름진"
   avatar           : "/assets/images/profile.jpg"
   bio              : "The greatest glory in living lies not in never falling, but in rising every time we fall."
-  location         : "Somewhere"
+  location         : # "Somewhere"
   email            :
   links:
     - label: "Email"
@@ -124,7 +124,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/ssda332"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -140,7 +140,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/ssda332"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -292,3 +292,5 @@ defaults:
       related: true
       show_date: true
       date_format: "%Y-%m-%d"
+      sidebar:
+        nav: "docs"

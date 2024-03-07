@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "테스트 포스팅"
 ---
 
