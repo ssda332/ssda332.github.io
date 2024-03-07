@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "기름진"
-  avatar           : "/assets/images/profile.JPG"
+  avatar           : "/assets/images/profile.jpg"
   bio              : "The greatest glory in living lies not in never falling, but in rising every time we fall."
   location         : "Somewhere"
   email            :
