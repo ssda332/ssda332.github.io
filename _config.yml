@@ -30,29 +30,10 @@ masthead_title           : # overrides the website title displayed in the masthe
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
-  disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+  provider               : "utterances"
   utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
-  giscus:
-    repo_id              : # Shown during giscus setup at https://giscus.app
-    category_name        : # Full text name of the category
-    category_id          : # Shown during giscus setup at https://giscus.app
-    discussion_term      : # "pathname" (default), "url", "title", "og:title"
-    reactions_enabled    : # '1' for enabled (default), '0' for disabled
-    theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
-  staticman:
-    branch               : # "master"
-    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
+    theme                : "github-light"
+    issue_term           : "pathname"
 reCaptcha:
   siteKey                :
   secret                 :
@@ -104,7 +85,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "기름진"
+  name             : "기름진1"
   avatar           : "/assets/images/profile.jpg"
   bio              : "The greatest glory in living lies not in never falling, but in rising every time we fall."
   #location         : # "Somewhere"
@@ -286,9 +267,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: # true
-      share: true
+      comments: true
+      share: false
       related: true
       show_date: true
       date_format: "%Y-%m-%d"
+      sidebar:
+        nav: "categories"
