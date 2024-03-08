@@ -23,7 +23,7 @@ name                     : "oilkim96"
 description              : "An amazing website."
 url                      : "https://ssda332.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "ssda332/ssda332.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/bird_head.jpg"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
