@@ -1,5 +1,5 @@
 ---
-title: Operating system - System Structure - 1
+title: Operating system (1) System Structure - 1
 excerpt: "System Structure - 1"
 
 categories:

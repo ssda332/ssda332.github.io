@@ -1,6 +1,6 @@
 ---
-title: Operating system - System Structure - 1
-excerpt: "System Structure - 1"
+title: Operating system (2) Process - 1
+excerpt: "Process - 1"
 
 categories:
   - OS
