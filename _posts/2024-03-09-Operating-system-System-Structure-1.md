@@ -109,4 +109,4 @@ last_modified_at: 2024-03-09
 
 참조
 
-[운영체제 - 이화여자대학교 | KOCW 공개 강의](http://www.kocw.net/home/search/kemView.do?kemId=1046323)
+[운영체제 - 이화여자대학교 KOCW 공개 강의](http://www.kocw.net/home/search/kemView.do?kemId=1046323)
