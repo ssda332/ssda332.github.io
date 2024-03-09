@@ -59,6 +59,7 @@ for exported_foldername in ${exported_foldername_array[*]}; do
     if [[ $meta_title != "# "* ]]; then  # 맨 앞이 #으로 되어있는지 확인해서 아니면, 직접 입력받기
     	echo -n "Enter a title of the post:"
         read  meta_title
+        sed -i '1s|^|'"$meta_title"'\n|' "$exported_file_path"
     fi
     meta_title=$(echo "$meta_title" | sed 's/# //g')
     
@@ -80,8 +81,8 @@ for exported_foldername in ${exported_foldername_array[*]}; do
     meta_date="$(date +%Y)-$(date +%m)-$(date +%d) $(date +%H):$(date +%M):$(date +%S) +0000"
     meta_last_modified_at="$(date +%Y)-$(date +%m)-$(date +%d) $(date +%H):$(date +%M):$(date +%S) +0000"
 
-    # sed를 사용하여 YAML Front Matter 추가
-    if sed -i '1s|^|---\n|' "$exported_file_path" &&
+    # sed를 사용하여 YAML Front Matter(meta 정보) 추가
+    if sed -i '1s|.*|---\n|' "$exported_file_path" &&
     sed -i '2s/^/title: '"$meta_title"'\n/' "$exported_file_path" &&
     sed -i '3s/^/subtitle: '"$meta_subtitle"'\n/' "$exported_file_path" &&
     sed -i '4s/^/categories: '"$meta_categories"'\n/' "$exported_file_path" &&

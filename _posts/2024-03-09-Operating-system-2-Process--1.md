@@ -118,4 +118,4 @@ PCB의 pointer 영역이 큐 안에서 다음 프로세스를 가리킨다
 
 참조
 
-[운영체제 - 이화여자대학교 | KOCW 공개 강의](http://www.kocw.net/home/search/kemView.do?kemId=1046323)
+[운영체제 - 이화여자대학교 KOCW 공개 강의](http://www.kocw.net/home/search/kemView.do?kemId=1046323)
