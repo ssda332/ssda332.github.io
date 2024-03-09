@@ -13,7 +13,6 @@ toc_sticky: true
 date: 2024-03-09
 last_modified_at: 2024-03-09
 ---
-# Operating system-System Structure-1
 
 ![Untitled](/assets/images/2024-03-09-Operating-system-System-Structure-1/Untitled.png)
 

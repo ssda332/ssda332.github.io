@@ -1,10 +1,17 @@
 ---
 title: Operating system (5) CPU Scheduling - 1
-subtitle: 1
-categories: 2
-tags: 3
-date: 2024-03-09 12:36:05 +0000
-last_modified_at: 2024-03-09 12:36:06 +0000
+excerpt: "CPU Scheduling - 1"
+
+categories:
+  - OS
+
+permalink: /os/5/
+
+toc: true
+toc_sticky: true
+ 
+date: 2024-03-09
+last_modified_at: 2024-03-09
 ---
 
 

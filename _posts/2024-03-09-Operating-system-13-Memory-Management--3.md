@@ -1,12 +1,18 @@
 ---
 title: Operating system (13) Memory Management - 3
-subtitle: 11
-categories: 2
-tags: 3
-date: 2024-03-09 12:38:26 +0000
-last_modified_at: 2024-03-09 12:38:27 +0000
----
+excerpt: "Memory Management - 3"
 
+categories:
+  - OS
+
+permalink: /os/13/
+
+toc: true
+toc_sticky: true
+ 
+date: 2024-03-09
+last_modified_at: 2024-03-09
+---
 
 ## Multilevel Paging and Performance
 

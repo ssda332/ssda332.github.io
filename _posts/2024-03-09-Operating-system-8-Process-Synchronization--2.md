@@ -1,12 +1,18 @@
 ---
 title: Operating system (8) Process Synchronization - 2
-subtitle: 1
-categories: 2
-tags: 3
-date: 2024-03-09 12:37:02 +0000
-last_modified_at: 2024-03-09 12:37:02 +0000
----
+excerpt: "Process Synchronization - 2"
 
+categories:
+  - OS
+
+permalink: /os/8/
+
+toc: true
+toc_sticky: true
+ 
+date: 2024-03-09
+last_modified_at: 2024-03-09
+---
 
 ## Algorithm 1
 

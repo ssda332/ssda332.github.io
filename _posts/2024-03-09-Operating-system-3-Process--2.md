@@ -1,12 +1,18 @@
 ---
 title: Operating system (3) Process - 2
-subtitle: 1
-categories: 2
-tags: 3
-date: 2024-03-09 12:34:29 +0000
-last_modified_at: 2024-03-09 12:34:29 +0000
----
+excerpt: "Process - 2"
 
+categories:
+  - OS
+
+permalink: /os/3/
+
+toc: true
+toc_sticky: true
+ 
+date: 2024-03-09
+last_modified_at: 2024-03-09
+---
 
 ### Thread : CPU를 수행하는 단위, 프로세스 내부에 CPU 수행 단위가 여러개 있는것
 

@@ -1,10 +1,17 @@
 ---
 title: Operating system (12) Memory Management - 2
-subtitle: 1
-categories: 2
-tags: 3
-date: 2024-03-09 12:38:10 +0000
-last_modified_at: 2024-03-09 12:38:10 +0000
+excerpt: "Memory Management - 2"
+
+categories:
+  - OS
+
+permalink: /os/12/
+
+toc: true
+toc_sticky: true
+ 
+date: 2024-03-09
+last_modified_at: 2024-03-09
 ---
 
 

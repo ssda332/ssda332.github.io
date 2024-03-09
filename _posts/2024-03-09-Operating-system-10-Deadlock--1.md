@@ -1,10 +1,17 @@
 ---
 title: Operating system (10) Deadlock - 1
-subtitle: 1
-categories: 2
-tags: 3
-date: 2024-03-09 12:37:32 +0000
-last_modified_at: 2024-03-09 12:37:32 +0000
+excerpt: "Deadlock - 1"
+
+categories:
+  - OS
+
+permalink: /os/10/
+
+toc: true
+toc_sticky: true
+ 
+date: 2024-03-09
+last_modified_at: 2024-03-09
 ---
 
 

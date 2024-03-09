@@ -1,13 +1,18 @@
 ---
 title: Operating system (6) CPU Scheduling - 2
-subtitle: 1
-categories: 2
-tags: 3
-date: 2024-03-09 12:36:20 +0000
-last_modified_at: 2024-03-09 12:36:20 +0000
+excerpt: "CPU Scheduling - 2"
+
+categories:
+  - OS
+
+permalink: /os/6/
+
+toc: true
+toc_sticky: true
+ 
+date: 2024-03-09
+last_modified_at: 2024-03-09
 ---
-
-
 ### 성능척도
 
 - 이용률

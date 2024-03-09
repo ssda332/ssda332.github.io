@@ -59,7 +59,6 @@ for exported_foldername in ${exported_foldername_array[*]}; do
     if [[ $meta_title != "# "* ]]; then  # 맨 앞이 #으로 되어있는지 확인해서 아니면, 직접 입력받기
     	echo -n "Enter a title of the post:"
         read  meta_title
-        sed -i '1s|^|'"$meta_title"'\n|' "$exported_file_path"
     fi
     meta_title=$(echo "$meta_title" | sed 's/# //g')
     

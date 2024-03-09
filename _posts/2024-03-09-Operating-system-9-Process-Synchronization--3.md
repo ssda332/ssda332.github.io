@@ -1,10 +1,17 @@
 ---
 title: Operating system (9) Process Synchronization - 3
-subtitle: 1
-categories: 2
-tags: 3
-date: 2024-03-09 12:37:14 +0000
-last_modified_at: 2024-03-09 12:37:14 +0000
+excerpt: "Process Synchronization - 3"
+
+categories:
+  - OS
+
+permalink: /os/9/
+
+toc: true
+toc_sticky: true
+ 
+date: 2024-03-09
+last_modified_at: 2024-03-09
 ---
 
 

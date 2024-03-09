@@ -1,10 +1,17 @@
 ---
 title: Operating system (7) Process Synchronization - 1
-subtitle: 1
-categories: 2
-tags: 3
-date: 2024-03-09 12:36:44 +0000
-last_modified_at: 2024-03-09 12:36:45 +0000
+excerpt: "Process Synchronization - 1"
+
+categories:
+  - OS
+
+permalink: /os/7/
+
+toc: true
+toc_sticky: true
+ 
+date: 2024-03-09
+last_modified_at: 2024-03-09
 ---
 
 

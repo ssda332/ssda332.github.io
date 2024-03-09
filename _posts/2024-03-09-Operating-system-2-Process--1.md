@@ -1,10 +1,17 @@
 ---
-title: Operating system (2) Process - 1
-subtitle: 1
-categories: 2
-tags: 3
-date: 2024-03-09 12:18:49 +0000
-last_modified_at: 2024-03-09 12:18:50 +0000
+title: Operating system - System Structure - 1
+excerpt: "System Structure - 1"
+
+categories:
+  - OS
+
+permalink: /os/2/
+
+toc: true
+toc_sticky: true
+ 
+date: 2024-03-09
+last_modified_at: 2024-03-09
 ---
 
 
