@@ -10,7 +10,7 @@ posts_folder_path='_posts' # 여기서 /을 앞에 넣으면 안됨. 이미지 �
 images_folder_path='assets/images'
 
 # Name regexp of exported zip file from Notion
-exported_zip_reg="*Export-*.zip"
+exported_zip_reg="Export-*.zip"
 
 
 echo "##### Welcome to Notion-to-GitHub-Pages! #####"
@@ -80,28 +80,26 @@ for exported_foldername in ${exported_foldername_array[*]}; do
     meta_date="$(date +%Y)-$(date +%m)-$(date +%d) $(date +%H):$(date +%M):$(date +%S) +0000"
     meta_last_modified_at="$(date +%Y)-$(date +%m)-$(date +%d) $(date +%H):$(date +%M):$(date +%S) +0000"
 
-    # sed를 사용하여 YAML Front Matter(meta 정보) 추가
-    if sed -i '1s|.*|---\n|' "$exported_file_path" &&
-    sed -i '2s/^/title: '"$meta_title"'\n/' "$exported_file_path" &&
-    sed -i '3s/^/subtitle: '"$meta_subtitle"'\n/' "$exported_file_path" &&
-    sed -i '4s/^/categories: '"$meta_categories"'\n/' "$exported_file_path" &&
-    sed -i '5s/^/tags: '"$meta_tags"'\n/' "$exported_file_path" &&
-    sed -i '6s/^/date: '"$meta_date"'\n/' "$exported_file_path" &&
-    sed -i '7s/^/last_modified_at: '"$meta_last_modified_at"'\n/' "$exported_file_path" &&
-    sed -i '8s/^/---\n/' "$exported_file_path"; then
-        # 모든 명령어가 성공적으로 실행되었을 때 "YAML Front Matter 추가 성공" 출력
-        echo "YAML Front Matter 추가 성공"
-    else
-        # 실패한 경우 해당하는 메시지 출력
-        echo "YAML Front Matter 추가 실패"
-    fi
+    # 한 줄씩 추가하기(한 번에 하려고 했더니 /n 줄바꿈이 문자열 그대로 md에 입력되어 한줄씩 추가로 수정)
+    # OS X ships with BSD sed, where the suffix for the -i option(changes made to the file) is mandatory. Try sed -i ''
+    # https://stackoverflow.com/questions/16745988/sed-command-with-i-option-in-place-editing-works-fine-on-ubuntu-but-not-mac
+    sed -i'' "1s|.*|---|" "$exported_file_path"
+    sed -i'' -e $'1 a\\\n'"title: $meta_title" "$exported_file_path" #title은 Notion 제목값으로 자동 입력
+    sed -i'' -e $'2 a\\\n'"subtitle: $meta_subtitle" "$exported_file_path" # https://unix.stackexchange.com/questions/52131/sed-on-osx-insert-at-a-certain-line
+    sed -i'' -e $'3 a\\\n'"categories: $meta_categories" "$exported_file_path"
+    sed -i'' -e $'4 a\\\n'"tags: $meta_tags" "$exported_file_path"
+    sed -i'' -e $'5 a\\\n'"date: $meta_date" "$exported_file_path"
+    sed -i'' -e $'6 a\\\n'"last_modified_at: $meta_last_modified_at" "$exported_file_path"
+    sed -i'' -e $'7 a\\\n'"---" "$exported_file_path"
+
 
     # Making a post file name
     fixed_filename="$(date +%Y)-$(date +%m)-$(date +%d)-$meta_title_encoded"
 
     # Changing a image path in exported_filename.md
     exported_filename_for_images_path=$(echo "$exported_filename" | sed 's/ /%20/g') # 파일명에 공백있는 경우: %20으로 수정. 추후 md 내 이미지 경로에 이용
-    sed -i "s|"$exported_filename_for_images_path"/Untitled|/$images_folder_path/$fixed_filename/Untitled|g" "$exported_file_path"
+    sed -i'' "s|"$exported_filename_for_images_path"/Untitled|/$images_folder_path/$fixed_filename/Untitled|g" "$exported_file_path"
+
 
     # Changing a file name and move
     # If directories not exist, make it. 
