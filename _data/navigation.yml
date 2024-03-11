@@ -1,11 +1,11 @@
 # main links
 main:
   - title: "Home"
-    # url: https://ssda332.github.io/
-    url: http://localhost:4000/
+    url: https://ssda332.github.io/
+    # url: http://localhost:4000/
   - title: "About"
-    # url: https://ssda332.github.io/about/
-    url: http://localhost:4000/about/
+    url: https://ssda332.github.io/about/
+    # url: http://localhost:4000/about/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
