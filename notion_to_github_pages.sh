@@ -34,11 +34,12 @@ while IFS=  read -r -d $'\0'; do
     exported_foldername_array+=($(basename "${REPLY%.*}")) # 앞에 ./와 뒤 확장자 제거
 done < <(find . -maxdepth 1 -name "$exported_zip_reg" -print0 )
 
+
+
 if [ ${#exported_foldername_array[*]} -lt 1 ]; then  # exported_zip_reg 규칙에 맞는 zip파일이 없다면 프로그램 종료
     echo -e "ERROR: There are no zip file named 'Export...'. \nExport zip file from Notion and move it to your local github page root folder."
     exit 100
 fi
-
 
 # Exported folder 별로 다음을 시행
 for exported_foldername in ${exported_foldername_array[*]}; do
@@ -53,6 +54,7 @@ for exported_foldername in ${exported_foldername_array[*]}; do
         do exported_filename=$(basename "${entry%.*}"); done #여기서 ""안해주면 파일명에 공백있을경우 앞만 받아옴. 꼭 해주기
 
     exported_file_path="$exported_foldername/$exported_filename.md"
+
 
     # title값 추출하기(첫번째 줄에 #으로 시작하는 문자열이 있는 경우, title로 인식)
     meta_title=$(head -n 1 "$exported_file_path")
@@ -97,7 +99,11 @@ for exported_foldername in ${exported_foldername_array[*]}; do
     fixed_filename="$(date +%Y)-$(date +%m)-$(date +%d)-$meta_title_encoded"
 
     # Changing a image path in exported_filename.md
-    exported_filename_for_images_path=$(echo "$exported_filename" | sed 's/ /%20/g') # 파일명에 공백있는 경우: %20으로 수정. 추후 md 내 이미지 경로에 이용
+    # exported_filename_for_images_path=$(echo "$exported_filename" | sed 's/ /%20/g') # 파일명에 공백있는 경우: %20으로 수정. 추후 md 내 이미지 경로에 이용
+    exported_filename_for_images_path=$(echo -n "$exported_filename" | curl -Gso /dev/null -w %{url_effective} --data-urlencode @- "") # 변수에 URL 인코딩된 패턴으로 한글 문자열을 초기화
+    exported_filename_for_images_path="${exported_filename_for_images_path/#\/\?/}" # 불필요한 문자열 제거
+    exported_filename_for_images_path=$(echo "$exported_filename_for_images_path" | sed 's/+/%20/g') # 파일명에 +(띄어쓰기 표시)있는 경우: %20으로 수정. 추후 md 내 이미지 경로에 이용
+    # echo "exported_filename_for_images_path : $exported_filename_for_images_path"
     sed -i'' "s|"$exported_filename_for_images_path"/Untitled|/$images_folder_path/$fixed_filename/Untitled|g" "$exported_file_path"
 
 
