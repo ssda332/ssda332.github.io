@@ -10,7 +10,7 @@ posts_folder_path='_posts' # 여기서 /을 앞에 넣으면 안됨. 이미지 �
 images_folder_path='assets/images'
 
 # Name regexp of exported zip file from Notion
-exported_zip_reg="*Export-*.zip"
+exported_zip_reg="*Export*.zip"
 
 
 echo "##### Welcome to Notion-to-GitHub-Pages! #####"
@@ -32,8 +32,7 @@ exported_foldername_array=()
 while IFS=  read -r -d $'\0'; do
     unzd "$REPLY"
     exported_foldername_array+=($(basename "${REPLY%.*}")) # 앞에 ./와 뒤 확장자 제거
-done < <(find . -maxdepth 1 -name "$exported_zip_reg" -print0 )
-
+done < <(find . -maxdepth 1 -iname "$exported_zip_reg" -print0 )
 
 
 if [ ${#exported_foldername_array[*]} -lt 1 ]; then  # exported_zip_reg 규칙에 맞는 zip파일이 없다면 프로그램 종료
